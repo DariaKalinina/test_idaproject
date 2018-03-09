@@ -12,12 +12,12 @@
         <section class="pay">
           <div class="pay__left"> 
             <!--блок меню-->
-            <ul class="#{className}">
-              <li class="#{className}__item"><a class="#{className}__link)" href="#">Личный кабинет</a></li>
-              <li class="#{className}__item"><a class="#{className}__link)" href="#">Платеж</a></li>
-              <li class="#{className}__item"><a class="#{className}__link)" href="#">История платежей</a></li>
-              <li class="#{className}__item"><a class="#{className}__link)" href="#">Настройки</a></li>
-              <li class="#{className}__item"><a class="#{className}__link)" href="#">Выход</a></li>
+            <ul class="menu">
+              <li class="menu__item"><a class="menu__link" href="#">Личный кабинет</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Платеж</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">История платежей</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Настройки</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Выход</a></li>
             </ul>
             <!--конец блока меню-->
           </div>
@@ -43,14 +43,17 @@
                 <div class="card__title">Данные банковской карты</div>
                 <div class="card__up-side">
                   <div class="card__row">
-                    <label class="card__number-title">Номер карты</label>
-                    <input class="card__number">
-                    <input class="card__number">
-                    <input class="card__number">
-                    <input class="card__number">
+                    <label class="card__number">
+                      <div class="card__number-title">Номер карты</div>
+                    </label>
+                    <input class="card__number-input">
+                    <input class="card__number-input">
+                    <input class="card__number-input">
+                    <input class="card__number-input">
                   </div>
                   <div class="card__row">
-                    <label class="card__validity">Срок действия
+                    <label class="card__validity">
+                      <div class="card__validity-text">Срок действия </div>
                       <select class="card__mounth"> </select>
                       <select class="card__year"></select>
                     </label>
@@ -61,8 +64,9 @@
                 </div>
                 <div class="card__down-side">
                   <div class="card__row">
-                    <label class="card__cvc-title">Код CVV2 / CVC2
-                      <input class="card__cvc">
+                    <label class="card__cvc">
+                      <div class="card__cvc-title">Код CVV2 / CVC2</div>
+                      <input class="card__cvc-input">
                     </label>
                   </div>
                 </div>
@@ -72,13 +76,31 @@
             <!--конец form  -->
             <!--начало описания       -->
             <div class="description">
-              Исходя из астатической системы координат Булгакова, соединение 
-              Исходя из астатической системы координат Булгакова, соединение 
-              Исходя из астатической системы координат Булгакова, соединение 
-              Исходя из астатической системы координат Булгакова, соединение 
-              Исходя из астатической системы координат Булгакова, соединение 
-              Исходя из астатической системы координат Булгакова, соединение 
-              Исходя из астатической системы координат Булгакова, соединение 
+              <p class="description__text">
+                Исходя из астатической системы координат Булгакова,
+                соединение стабильно. Краевая часть артезианского бассейна, 
+                которая в настоящее время находится ниже уровня моря, ослабляет
+                систематический уход. Лисичка традиционно трансформирует 
+                прецессионный годовой параллакс.
+              </p>
+              <p class="description__text">
+                 Выклинивание абсолютно аккумулирует твердый pадиотелескоп 
+                Максвелла.
+              </p>
+              <p class="description__text">
+                 Алмаз слагает горст. Делювий длительно колеблет лазерный
+                подвижный объект.
+              </p>
+              <p class="description__text">
+                 Устойчивость, например, параллельна. Аргумент перигелия 
+                определяет боксит. Проекция вертикально дает уходящий диабаз. 
+                Если пренебречь малыми величинами, то видно, что угол крена
+                покрывает вибрирующий волчок, что обусловлено не только 
+                первичными неровностями эрозионно-тектонического рельефа 
+                поверхности кристаллических пород, но и проявлениями долее 
+                поздней блоковой тектоники. Засветка неба заставляет иначе 
+                взглянуть на то, что такое волчок. 
+              </p>
             </div>
             <!--конец описания  -->
           </div>

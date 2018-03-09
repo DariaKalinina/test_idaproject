@@ -1,0 +1,25 @@
+.menu__item{
+  &:nth-child(odd){
+    background-color: $dark_odd;
+  }
+  &:nth-child(even){
+    background-color: $dark_even;
+  }
+  &:last-child .menu__link{
+    color: $grey;
+  }
+  &:hover{
+    background-color: $dark_grey;
+  }
+}
+
+.menu__link{
+  height: 75px;
+  width: 100%;
+  padding-left: 22px;
+  padding-top: 30px;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+}

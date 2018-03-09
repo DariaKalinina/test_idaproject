@@ -1,5 +1,5 @@
 mixin menu(className, data)
-  ul(class=`#{className}`)
+  ul(class=`${className}`)
     each item in data
-      li(class=`#{className}__item`)
-        a(class=`#{className}__link)` href='#')= item
+      li(class=`${className}__item`)
+        a(class=`${className}__link` href='#')= item

@@ -1,6 +1,13 @@
 .pay{
   @include clearfix();
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 8%;
+  padding-bottom: 8%;
 }
+//TODO уточнить про паддинги
 
 .pay__left,
 .pay__right{

@@ -2,8 +2,22 @@
 $font-size: 14px;
 $ls: 960px;
 
+//цвета
+$white: #fff;
+$black: #101114;
+$dark_odd: #1f2229;
+$dark_even: #191c24;
+$grey: #808592;
+$dark_grey: #2a2d37;
+$beige: #f7f8f8;
+$brown: #373c43;
+$cold_gray1: #8494ab;
+$cold_gray2: #89909d;
+
 //mixin
 @import 'mixins/mixin.scss';
 
 @import 'block/adjustment.scss';
+@import 'block/menu.scss';
 @import 'block/pay.scss';
+@import 'block/pay_block.scss';

@@ -1,4 +1,9 @@
 //переменные
 $font-size: 14px;
+$ls: 960px;
 
-@import 'global.scss';
+//mixin
+@import 'mixins/mixin.scss';
+
+@import 'block/adjustment.scss';
+@import 'block/pay.scss';

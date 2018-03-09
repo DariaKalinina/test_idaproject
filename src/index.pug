@@ -11,9 +11,61 @@ html(lang='ru')
       //- внутренний контайнер для адаптива
       .container
         section.pay
-          .pay__left левая часть
-          .pay__right правая часть
+          .pay__left 
+            ul.menu
+              li.menu__item
+                a(class="menu__link" href='#') Личный кабинет
+              li.menu__item
+                a(class="menu__link" href='#') Платеж
+              li.menu__item
+                a(class="menu__link" href='#') История платежей
+              li.menu__item
+                a(class="menu__link" href='#') Настройки  
+              li.menu__item
+                a(class="menu__link" href='#') Выход
+            
+          .pay__right 
+            form.order
+              .order__info
+                .info__title Информация по оплате:
+                ul.info__list
+                  li.info__item
+                    .info__key Номер счета:
+                    .info__valye
+                  li.info__item
+                    .info__key Сумма платежа:
+                    .info__valye  
+              .order__card
+                .card__title Данные банковской карты
+                .card__up-side
+                  .card__row
+                    label.card__number-title Номер карты
+                      input.card__number
+                      input.card__number
+                      input.card__number
+                      input.card__number
+                  .card__row
+                    label.card__validity Срок действия
+                      select.card__mounth 
+                      select.card__year
+                  .card__row
+                    input.card__person    
+                .card__down-side
+                  .card__row
+                    label.card__cvc-title Код CVV2 / CVC2
+                      input.card__cvc
+              input(type='submit' value='оплатить' class="order__submit")       
+                    
+            .description
+              |Исходя из астатической системы координат Булгакова, соединение 
+              |Исходя из астатической системы координат Булгакова, соединение 
+              |Исходя из астатической системы координат Булгакова, соединение 
+              |Исходя из астатической системы координат Булгакова, соединение 
+              |Исходя из астатической системы координат Булгакова, соединение 
+              |Исходя из астатической системы координат Булгакова, соединение 
+              |Исходя из астатической системы координат Булгакова, соединение 
+          
     
     //- внешний скрипт      
-    script(src='js/script.min.js')
+    //- script(src='js/script.min.js')
         

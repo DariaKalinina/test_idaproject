@@ -1,0 +1,16 @@
+.pay{
+  @include clearfix();
+}
+
+.pay__left,
+.pay__right{
+  float: left;
+}
+
+.pay__left{
+  width: 33.5%;
+}
+
+.pay__right{
+  width: 66.5%;
+}

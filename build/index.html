@@ -11,39 +11,43 @@
       <div class="container">
         <section class="pay">
           <div class="pay__left"> 
-            <ul class="menu">
-              <li class="menu__item"><a class="menu__link" href="#">Личный кабинет</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Платеж</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">История платежей</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Настройки  </a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Выход</a></li>
+            <!--блок меню-->
+            <ul class="#{className}">
+              <li class="#{className}__item"><a class="#{className}__link)" href="#">Личный кабинет</a></li>
+              <li class="#{className}__item"><a class="#{className}__link)" href="#">Платеж</a></li>
+              <li class="#{className}__item"><a class="#{className}__link)" href="#">История платежей</a></li>
+              <li class="#{className}__item"><a class="#{className}__link)" href="#">Настройки</a></li>
+              <li class="#{className}__item"><a class="#{className}__link)" href="#">Выход</a></li>
             </ul>
+            <!--конец блока меню-->
           </div>
           <div class="pay__right"> 
+            <!--данные о пользователе (json)-->
+            <div class="info">
+              <div class="info__title">Информация по оплате:  </div>
+              <ul class="info__list">
+                <li class="info__item">
+                  <div class="info__key">Номер счета:</div>
+                  <div class="info__valye"></div>
+                </li>
+                <li class="info__item">
+                  <div class="info__key">Сумма платежа:</div>
+                  <div class="info__valye"> </div>
+                </li>
+              </ul>
+            </div>
+            <!--конец данныx о пользователе -->
+            <!--блок form    -->
             <form class="order">
-              <div class="order__info">
-                <div class="info__title">Информация по оплате:</div>
-                <ul class="info__list">
-                  <li class="info__item">
-                    <div class="info__key">Номер счета:</div>
-                    <div class="info__valye"></div>
-                  </li>
-                  <li class="info__item">
-                    <div class="info__key">Сумма платежа:</div>
-                    <div class="info__valye"> </div>
-                  </li>
-                </ul>
-              </div>
               <div class="order__card">
                 <div class="card__title">Данные банковской карты</div>
                 <div class="card__up-side">
                   <div class="card__row">
-                    <label class="card__number-title">Номер карты
-                      <input class="card__number">
-                      <input class="card__number">
-                      <input class="card__number">
-                      <input class="card__number">
-                    </label>
+                    <label class="card__number-title">Номер карты</label>
+                    <input class="card__number">
+                    <input class="card__number">
+                    <input class="card__number">
+                    <input class="card__number">
                   </div>
                   <div class="card__row">
                     <label class="card__validity">Срок действия
@@ -65,6 +69,8 @@
               </div>
               <input class="order__submit" type="submit" value="оплатить">
             </form>
+            <!--конец form  -->
+            <!--начало описания       -->
             <div class="description">
               Исходя из астатической системы координат Булгакова, соединение 
               Исходя из астатической системы координат Булгакова, соединение 
@@ -74,6 +80,7 @@
               Исходя из астатической системы координат Булгакова, соединение 
               Исходя из астатической системы координат Булгакова, соединение 
             </div>
+            <!--конец описания  -->
           </div>
         </section>
       </div>

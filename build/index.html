@@ -28,11 +28,11 @@
               <ul class="info__list">
                 <li class="info__item">
                   <div class="info__key">Номер счета:</div>
-                  <div class="info__valye"></div>
+                  <div class="info__valye">87123658716587</div>
                 </li>
                 <li class="info__item">
                   <div class="info__key">Сумма платежа:</div>
-                  <div class="info__valye"> </div>
+                  <div class="info__valye">100 руб.</div>
                 </li>
               </ul>
             </div>
@@ -41,37 +41,66 @@
             <form class="order">
               <div class="order__card">
                 <div class="card__title">Данные банковской карты</div>
-                <div class="card__up-side">
-                  <div class="card__row">
-                    <label class="card__number">
-                      <div class="card__number-title">Номер карты</div>
-                    </label>
-                    <input class="card__number-input">
-                    <input class="card__number-input">
-                    <input class="card__number-input">
-                    <input class="card__number-input">
+                <div class="card__view">
+                  <div class="card__up-side">
+                    <div class="card__row">
+                      <label class="card__number">
+                        <div class="card__number-title">Номер карты</div>
+                      </label>
+                      <input class="card__number-input" type="text">
+                      <input class="card__number-input" type="text">
+                      <input class="card__number-input" type="text">
+                      <input class="card__number-input" type="text">
+                    </div>
+                    <div class="card__row">
+                      <label class="card__validity">
+                        <div class="card__validity-text">Срок действия </div>
+                        <select class="card__mounth">
+                          <option class="card__mounth-ndx" value="i">01</option>
+                          <option class="card__mounth-ndx" value="i">02</option>
+                          <option class="card__mounth-ndx" value="i">03</option>
+                          <option class="card__mounth-ndx" value="i">04</option>
+                          <option class="card__mounth-ndx" value="i">05</option>
+                          <option class="card__mounth-ndx" value="i">06</option>
+                          <option class="card__mounth-ndx" value="i">07</option>
+                          <option class="card__mounth-ndx" value="i">08</option>
+                          <option class="card__mounth-ndx" value="i">09</option>
+                          <option class="card__mounth-ndx" value="i">10</option>
+                          <option class="card__mounth-ndx" value="i">11</option>
+                          <option class="card__mounth-ndx" value="i">12</option>
+                        </select>
+                        <select class="card__year">
+                          <option class="card__year-ndx" value="i">2018</option>
+                          <option class="card__year-ndx" value="i">2019</option>
+                          <option class="card__year-ndx" value="i">2020</option>
+                          <option class="card__year-ndx" value="i">2021</option>
+                          <option class="card__year-ndx" value="i">2022</option>
+                          <option class="card__year-ndx" value="i">2023</option>
+                          <option class="card__year-ndx" value="i">2024</option>
+                          <option class="card__year-ndx" value="i">2025</option>
+                          <option class="card__year-ndx" value="i">2026</option>
+                          <option class="card__year-ndx" value="i">2027</option>
+                          <option class="card__year-ndx" value="i">2028</option>
+                        </select>
+                      </label>
+                    </div>
+                    <div class="card__row">
+                      <input class="card__person" placeholder="Держатель карты" type="text">
+                    </div>
                   </div>
-                  <div class="card__row">
-                    <label class="card__validity">
-                      <div class="card__validity-text">Срок действия </div>
-                      <select class="card__mounth"> </select>
-                      <select class="card__year"></select>
-                    </label>
-                  </div>
-                  <div class="card__row">
-                    <input class="card__person">
-                  </div>
-                </div>
-                <div class="card__down-side">
-                  <div class="card__row">
-                    <label class="card__cvc">
-                      <div class="card__cvc-title">Код CVV2 / CVC2</div>
-                      <input class="card__cvc-input">
-                    </label>
+                  <div class="card__down-side">
+                    <div class="card__band"></div>
+                    <div class="card__row">
+                      <label class="card__cvc">
+                        <div class="card__cvc-title">Код CVV2 / CVC2</div>
+                        <input class="card__cvc-input" type="text">
+                        <div class="card__cvc-after"></div>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
-              <input class="order__submit" type="submit" value="оплатить">
+              <input class="order__submit" type="submit" value="Оплатить">
             </form>
             <!--конец form  -->
             <!--начало описания       -->

@@ -51,10 +51,19 @@ function scripts() {
     .pipe(gulp.dest(paths.build + 'js/'))
 }
 
-function htmls() {
+function pugs() {
+  let locals = require('./src/sourse/info.json');
   return gulp.src(paths.src + '*.pug')
-    .pipe(pug({pretty: true}))
+    .pipe(pug({
+      locals : locals,
+      pretty: true
+    }))
     .pipe(gulp.dest(paths.build));
+}
+
+function moveImg() {
+  return gulp.src(paths.src + 'img/*.*')
+    .pipe(gulp.dest(paths.build + 'img/'));
 }
 
 function clean() {
@@ -64,7 +73,8 @@ function clean() {
 function watch() {
   gulp.watch(paths.src + 'scss/**/*.scss', styles);
   gulp.watch(paths.src + 'js/*.js', scripts);
-  gulp.watch(paths.src + '**/*.pug', htmls);
+  gulp.watch(paths.src + '**/*.pug', pugs);
+  // gulp.watch(paths.src + 'sourse/info.json', pugs);
 }
 
 function serve() {
@@ -78,17 +88,18 @@ function serve() {
 
 exports.styles = styles;
 exports.scripts = scripts;
-exports.htmls = htmls;
+exports.pugs = pugs;
+exports.moveImg = moveImg;
 exports.clean = clean;
 exports.watch = watch;
 
 gulp.task('build', gulp.series(
   clean,
-  gulp.parallel(styles, scripts, htmls)
+  gulp.parallel(styles, scripts, pugs, moveImg)
 ));
 
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(styles, scripts, htmls),
+  gulp.parallel(styles, scripts, pugs, moveImg),
   gulp.parallel(watch, serve)
 ));

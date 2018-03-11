@@ -1,0 +1,189 @@
+.order{
+  background-color: $beige;
+  color: $cold_gray1;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 45px;
+}
+
+.card__title{
+  font-size: 22px;
+  font-weight: bold;
+  color: $cold_gray3;
+  padding-bottom: 23px;
+}
+
+.card__view{
+  position: relative;
+  height: 280px;
+  font-size: 16px;
+  font-family: Arial;
+}
+
+.card__up-side,
+.card__down-side{
+  padding-top: 27px;
+  display: inline-block;
+  background-color: $beige;
+}
+
+.card__up-side{
+  position: absolute;
+  z-index: 10;
+  text-align: left;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $band_grey;
+  border-radius: 10px;
+  width: 354px;
+  height: 240px;
+}
+
+.card__down-side{
+  position: absolute;
+  z-index: 5;
+  top: 16px;
+  left: 173px;
+  text-align: right;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $band_grey;
+  border-radius: 10px;
+  width: 374px;
+  height: 240px;
+}
+
+.card__row{
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+.card__number-input{
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $band_grey;
+  background-color: $white;
+  width: 66px;
+  height: 41px;
+  margin-right: 8px;
+  padding-left: 10px;
+}
+
+.card__person{
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $band_grey;
+  background-color: $white;
+  width: 320px;
+  height: 41px;
+  padding-left: 10px;
+}
+
+// .card__mounth-ndx{
+//
+// }
+//
+.card__band{
+  height: 41px;
+  width: 100%;
+  background-color: $band_grey;
+  margin-bottom: 15px;
+}
+
+.card__cvc{
+  display: inline-block;
+  text-align: left;
+}
+
+.card__cvc-title{
+
+}
+
+.card__cvc-input{
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $band_grey;
+  background-color: $white;
+  width: 138px;
+  height: 41px;
+  padding-right: 38px;
+}
+
+.card__cvc-after{
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+    &:after{
+      position: absolute;
+      z-index: 2;
+      top: -18px;
+      right: 12px;
+      text-align: center;
+      display: inline-block;
+      content: "?";
+      color: $light_gray;
+      line-height: 1.7;
+      border-style: solid;
+      border-width: 1px;
+      border-color: $light_gray;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+    }
+}
+
+.order__submit{
+  display: block;
+  border-radius: 20px;
+  border: 0;
+  background: -moz-linear-gradient($light_blue, $dark_blue);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from($light_blue), to($dark_blue));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light_blue', endColorstr='$dark_blue');
+  width: 133px;
+  height: 40px;
+  color: $white;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+//кастомизация формы
+input:focus{
+  outline: none!important;
+  border: 1px solid $cold_gray2;
+}
+
+input::-moz-placeholder,
+input::-ms-input-placeholder,
+input::-webkit-input-placeholder{
+  margin-left: 10px;
+  color: rgba($light_gray, .9);
+}
+
+.card__mounth,
+.card__year{
+    width: 70px;
+    height: 41px;
+    -webkit-appearance: none;
+    padding-left: 16px;
+    background:$white url('../img/arrow.svg') no-repeat 88% center;
+    /* for FF */
+    -moz-appearance: none;
+    text-overflow: '';
+    /* for IE */
+    -ms-appearance: none;
+    appearance: none!important;
+    &:-ms-expand {
+        display: none;
+    }
+}
+
+.card__year{
+  width: 86px;
+}

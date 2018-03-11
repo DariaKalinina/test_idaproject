@@ -25,10 +25,10 @@ html(lang='ru')
               ul.info__list
                 li.info__item
                   .info__key Номер счета:
-                  .info__valye
+                  .info__valye= numberPersonal
                 li.info__item
                   .info__key Сумма платежа:
-                  .info__valye  
+                  .info__valye= sum
             //конец данныx о пользователе 
                   
             //блок form    
@@ -36,25 +36,35 @@ html(lang='ru')
               
               .order__card
                 .card__title Данные банковской карты
-                .card__up-side
-                  .card__row
-                    label.card__number
-                      .card__number-title Номер карты
-                    - for (var x = 0; x < 4; x++)
-                      input.card__number-input
-                  .card__row
-                    label.card__validity
-                      .card__validity-text Срок действия 
-                      select.card__mounth 
-                      select.card__year
-                  .card__row
-                    input.card__person    
-                .card__down-side
-                  .card__row
-                    label.card__cvc
-                      .card__cvc-title Код CVV2 / CVC2
-                      input.card__cvc-input
-              input(type='submit' value='оплатить' class="order__submit")       
+                .card__view
+                  .card__up-side
+                    .card__row
+                      label.card__number
+                        .card__number-title Номер карты
+                      - for (var x = 0; x < 4; x++)
+                        input.card__number-input(type="text")
+                    .card__row
+                      label.card__validity
+                        .card__validity-text Срок действия 
+                        select.card__mounth
+                          - for (var i = 1; i <= 9; i++)
+                            option.card__mounth-ndx(value="i")="0"+i
+                          - for (var i = 10; i <= 12; i++)
+                            option.card__mounth-ndx(value="i")=i   
+                        select.card__year
+                          - for (var i = 2018; i <= 2028; i++)
+                            option.card__year-ndx(value="i")=i
+                    .card__row
+                      input(class="card__person" placeholder="Держатель карты" type="text")    
+                  .card__down-side
+                    .card__band
+                    .card__row
+                      label.card__cvc
+                        .card__cvc-title Код CVV2 / CVC2
+                        input.card__cvc-input(type="text")
+                        .card__cvc-after
+                          
+              input(type='submit' value='Оплатить' class="order__submit")       
             //конец form  
             
             //начало описания       

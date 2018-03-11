@@ -1,0 +1,27 @@
+.info{
+  background-color: $beige;
+  color: $cold_gray1;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 44px;
+  padding-bottom: 26px;
+}
+
+.info__title{
+  padding-bottom: 15px;
+}
+
+.info__key,
+.info__valye{
+  display: inline-block;
+  text-align: left;
+}
+
+.info__key{
+  width: 160px;
+  padding-bottom: 5px;
+}
+
+.info__valye{
+  color: $cold_gray3;
+}

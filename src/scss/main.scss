@@ -13,6 +13,11 @@ $beige: #f7f8f8;
 $brown: #373c43;
 $cold_gray1: #8494ab;
 $cold_gray2: #89909d;
+$cold_gray3: #383d43;
+$light_gray: #bec6cf;
+$band_grey: #e4e9ee;
+$light_blue: #0059be;
+$dark_blue: #004ca2;
 
 //mixin
 @import 'mixins/mixin.scss';
@@ -20,4 +25,6 @@ $cold_gray2: #89909d;
 @import 'block/adjustment.scss';
 @import 'block/menu.scss';
 @import 'block/pay.scss';
-@import 'block/pay_block.scss';
+@import 'block/info.scss';
+@import 'block/order.scss';
+@import 'block/description.scss';

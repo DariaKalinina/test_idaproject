@@ -76,12 +76,13 @@ h6 {
 .menu__link {
   height: 75px;
   width: 100%;
-  padding-left: 22px;
-  padding-top: 30px;
+  padding-left: 30px;
+  padding-top: 28px;
   display: inline-block;
-  text-transform: uppercase;
   text-decoration: none;
   color: #fff;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .pay {
@@ -122,11 +123,11 @@ h6 {
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 44px;
-  padding-bottom: 26px;
+  padding-bottom: 21px;
 }
 
 .info__title {
-  padding-bottom: 15px;
+  padding-bottom: 21px;
 }
 
 .info__key,
@@ -136,8 +137,8 @@ h6 {
 }
 
 .info__key {
-  width: 160px;
-  padding-bottom: 5px;
+  width: 156px;
+  padding-bottom: 8px;
 }
 
 .info__valye {
@@ -156,19 +157,18 @@ h6 {
   font-size: 22px;
   font-weight: bold;
   color: #383d43;
-  padding-bottom: 23px;
+  padding-bottom: 20px;
 }
 
 .card__view {
   position: relative;
-  height: 280px;
+  height: 275px;
   font-size: 16px;
   font-family: Arial;
 }
 
 .card__up-side,
 .card__down-side {
-  padding-top: 27px;
   display: inline-block;
   background-color: #f7f8f8;
 }
@@ -181,28 +181,34 @@ h6 {
   border-width: 1px;
   border-color: #e4e9ee;
   border-radius: 10px;
-  width: 354px;
-  height: 240px;
+  width: 350px;
+  height: 236px;
+  padding-top: 20px;
 }
 
 .card__down-side {
   position: absolute;
   z-index: 5;
-  top: 16px;
-  left: 173px;
+  top: 19px;
+  left: 190px;
   text-align: right;
   border-style: solid;
   border-width: 1px;
   border-color: #e4e9ee;
   border-radius: 10px;
   width: 374px;
-  height: 240px;
+  height: 237px;
+  padding-top: 24px;
 }
 
 .card__row {
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-bottom: 10px;
+  padding-right: 9px;
+  padding-left: 14px;
+  padding-bottom: 13px;
+}
+
+.card__number-title {
+  padding-bottom: 3px;
 }
 
 .card__number-input {
@@ -211,10 +217,47 @@ h6 {
   border-width: 1px;
   border-color: #e4e9ee;
   background-color: #fff;
-  width: 66px;
+  width: 63px;
   height: 41px;
-  margin-right: 8px;
+  margin-right: 7px;
   padding-left: 10px;
+}
+
+.card__number-input--color-red {
+  border-color: red;
+}
+
+.card__validity-text {
+  padding-bottom: 4px;
+}
+
+.card__mounth,
+.card__year {
+  height: 41px;
+  border-color: #e4e9ee;
+  -webkit-appearance: none;
+  padding-left: 15px;
+  background: #fff url("../img/arrow.svg") no-repeat 85% center;
+  /* for FF */
+  -moz-appearance: none;
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none !important;
+}
+
+.card__mounth:-ms-expand,
+.card__year:-ms-expand {
+  display: none;
+}
+
+.card__mounth {
+  width: 70px;
+  margin-right: 5px;
+}
+
+.card__year {
+  width: 86px;
 }
 
 .card__person {
@@ -228,16 +271,24 @@ h6 {
   padding-left: 10px;
 }
 
+.card__person--color-red {
+  border-color: red;
+}
+
 .card__band {
   height: 41px;
   width: 100%;
   background-color: #e4e9ee;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .card__cvc {
   display: inline-block;
   text-align: left;
+}
+
+.card__cvc-title {
+  padding-bottom: 2px;
 }
 
 .card__cvc-input {
@@ -246,9 +297,14 @@ h6 {
   border-width: 1px;
   border-color: #e4e9ee;
   background-color: #fff;
-  width: 138px;
+  width: 136px;
   height: 41px;
   padding-right: 38px;
+  padding-left: 10px;
+}
+
+.card__cvc-input--color-red {
+  border-color: red;
 }
 
 .card__cvc-after {
@@ -276,6 +332,10 @@ h6 {
   height: 25px;
 }
 
+.order__submit-wrapper {
+  padding-left: 14px;
+}
+
 .order__submit {
   display: block;
   border-radius: 20px;
@@ -293,7 +353,10 @@ h6 {
 
 input:focus {
   outline: none !important;
-  border: 1px solid #89909d;
+}
+
+select:focus {
+  outline: none !important;
 }
 
 input::-moz-placeholder,
@@ -303,32 +366,8 @@ input::-webkit-input-placeholder {
   color: rgba(190, 198, 207, 0.9);
 }
 
-.card__mounth,
-.card__year {
-  width: 70px;
-  height: 41px;
-  -webkit-appearance: none;
-  padding-left: 16px;
-  background: #fff url("../img/arrow.svg") no-repeat 88% center;
-  /* for FF */
-  -moz-appearance: none;
-  text-overflow: '';
-  /* for IE */
-  -ms-appearance: none;
-  appearance: none !important;
-}
-
-.card__mounth:-ms-expand,
-.card__year:-ms-expand {
-  display: none;
-}
-
-.card__year {
-  width: 86px;
-}
-
 .description {
-  padding: 26px 30px 30px;
+  padding: 12px 30px 20px;
   background-color: #373c43;
   color: #89909d;
   font-family: Arial;

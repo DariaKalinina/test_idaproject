@@ -5,17 +5,18 @@ html(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width  initial-scale=1')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     title Оплата
     link(rel='stylesheet', href='css/main.min.css')
   body
     //- внешний контайнер
     .wrapper
-      //- внутренний контайнер для адаптива
+      //- внутренний контайнер для адаптиваsd
       .container
         section.pay
           .pay__left 
             //блок меню
-            +menu("menu", ["Личный кабинет", "Платеж", "История платежей", "Настройки", "Выход"])
+            +menu("menu", ["Личный кабинет", "Платежи", "История платежей", "Настройки", "Выйти"])
             //конец блока меню
             
           .pay__right 
@@ -42,7 +43,7 @@ html(lang='ru')
                       label.card__number
                         .card__number-title Номер карты
                       - for (var x = 0; x < 4; x++)
-                        input.card__number-input(type="text")
+                        input.card__number-input(class=`card__number-input--${x}` type="text" maxlength="4")
                     .card__row
                       label.card__validity
                         .card__validity-text Срок действия 
@@ -61,10 +62,11 @@ html(lang='ru')
                     .card__row
                       label.card__cvc
                         .card__cvc-title Код CVV2 / CVC2
-                        input.card__cvc-input(type="text")
+                        input.card__cvc-input(type="text" maxlength="3")
                         .card__cvc-after
-                          
-              input(type='submit' value='Оплатить' class="order__submit")       
+              
+              .order__submit-wrapper            
+                input(type='submit' value='Оплатить' class="order__submit")       
             //конец form  
             
             //начало описания       
@@ -93,5 +95,5 @@ html(lang='ru')
             //конец описания  
     
     //- внешний скрипт      
-    //- script(src='js/script.min.js')
+    script(src='js/script.min.js')
         

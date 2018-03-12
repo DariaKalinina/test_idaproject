@@ -10,19 +10,18 @@
   font-size: 22px;
   font-weight: bold;
   color: $cold_gray3;
-  padding-bottom: 23px;
+  padding-bottom: 20px;
 }
 
 .card__view{
   position: relative;
-  height: 280px;
+  height: 275px;
   font-size: 16px;
   font-family: Arial;
 }
 
 .card__up-side,
 .card__down-side{
-  padding-top: 27px;
   display: inline-block;
   background-color: $beige;
 }
@@ -35,28 +34,34 @@
   border-width: 1px;
   border-color: $band_grey;
   border-radius: 10px;
-  width: 354px;
-  height: 240px;
+  width: 350px;
+  height: 236px;
+  padding-top: 20px;
 }
 
 .card__down-side{
   position: absolute;
   z-index: 5;
-  top: 16px;
-  left: 173px;
+  top: 19px;
+  left: 190px;
   text-align: right;
   border-style: solid;
   border-width: 1px;
   border-color: $band_grey;
   border-radius: 10px;
   width: 374px;
-  height: 240px;
+  height: 237px;
+  padding-top: 24px;
 }
 
 .card__row{
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-bottom: 10px;
+  padding-right: 9px;
+  padding-left: 14px;
+  padding-bottom: 13px;
+}
+
+.card__number-title{
+  padding-bottom: 3px;
 }
 
 .card__number-input{
@@ -65,11 +70,46 @@
   border-width: 1px;
   border-color: $band_grey;
   background-color: $white;
-  width: 66px;
+  width: 63px;
   height: 41px;
-  margin-right: 8px;
+  margin-right: 7px;
   padding-left: 10px;
+    &--color-red{
+      border-color: red;
+    }
 }
+
+.card__validity-text{
+  padding-bottom: 4px;
+}
+
+.card__mounth,
+.card__year{
+    height: 41px;
+    border-color: $band_grey;
+    -webkit-appearance: none;
+    padding-left: 15px;
+    background:$white url('../img/arrow.svg') no-repeat 85% center;
+    /* for FF */
+    -moz-appearance: none;
+    text-overflow: '';
+    /* for IE */
+    -ms-appearance: none;
+    appearance: none!important;
+    &:-ms-expand {
+        display: none;
+    }
+}
+
+.card__mounth{
+    width: 70px;
+    margin-right: 5px;
+}
+
+.card__year{
+  width: 86px;
+}
+
 
 .card__person{
   display: block;
@@ -80,17 +120,16 @@
   width: 320px;
   height: 41px;
   padding-left: 10px;
+    &--color-red{
+      border-color: red;
+    }
 }
 
-// .card__mounth-ndx{
-//
-// }
-//
 .card__band{
   height: 41px;
   width: 100%;
   background-color: $band_grey;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .card__cvc{
@@ -99,7 +138,7 @@
 }
 
 .card__cvc-title{
-
+  padding-bottom: 2px;
 }
 
 .card__cvc-input{
@@ -108,9 +147,13 @@
   border-width: 1px;
   border-color: $band_grey;
   background-color: $white;
-  width: 138px;
+  width: 136px;
   height: 41px;
   padding-right: 38px;
+  padding-left: 10px;
+    &--color-red{
+      border-color: red;
+    }
 }
 
 .card__cvc-after{
@@ -137,6 +180,10 @@
     }
 }
 
+.order__submit-wrapper {
+  padding-left: 14px;
+}
+
 .order__submit{
   display: block;
   border-radius: 20px;
@@ -156,7 +203,10 @@
 //кастомизация формы
 input:focus{
   outline: none!important;
-  border: 1px solid $cold_gray2;
+}
+
+select:focus{
+  outline: none!important;
 }
 
 input::-moz-placeholder,
@@ -164,26 +214,4 @@ input::-ms-input-placeholder,
 input::-webkit-input-placeholder{
   margin-left: 10px;
   color: rgba($light_gray, .9);
-}
-
-.card__mounth,
-.card__year{
-    width: 70px;
-    height: 41px;
-    -webkit-appearance: none;
-    padding-left: 16px;
-    background:$white url('../img/arrow.svg') no-repeat 88% center;
-    /* for FF */
-    -moz-appearance: none;
-    text-overflow: '';
-    /* for IE */
-    -ms-appearance: none;
-    appearance: none!important;
-    &:-ms-expand {
-        display: none;
-    }
-}
-
-.card__year{
-  width: 86px;
 }

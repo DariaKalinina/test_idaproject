@@ -1,22 +1,29 @@
+.menu{
+  @include tablet864{
+    display: none;
+  }
+}
+
 .menu__item{
-  &:nth-child(odd){
-    background-color: $dark_odd;
-  }
-  &:nth-child(even){
-    background-color: $dark_even;
-  }
+  background-color: $dark;
+
   &:last-child .menu__link{
     color: $grey;
   }
   &:hover{
     background-color: $dark_grey;
   }
+  &--active{
+    background-color: $dark_grey;
+  }
 }
+
 
 .menu__link{
   height: 75px;
   width: 100%;
   padding-left: 30px;
+  padding-right: 30px;
   padding-top: 28px;
   display: inline-block;
   text-decoration: none;

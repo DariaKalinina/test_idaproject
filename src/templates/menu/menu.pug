@@ -1,5 +1,5 @@
 mixin menu(className, data)
   ul(class=`${className}`)
-    each item in data
-      li(class=`${className}__item`)
+    each item, index in data
+      li(class=`${className}__item` + ' ' +((index === 1 && className === "menu") ? `${className}__item--active` : ''))
         a(class=`${className}__link` href='#')= item

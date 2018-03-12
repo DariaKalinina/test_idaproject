@@ -17,6 +17,14 @@ html(lang='ru')
           .pay__left 
             //блок меню
             +menu("menu", ["Личный кабинет", "Платежи", "История платежей", "Настройки", "Выйти"])
+            a.burger(href="#")
+              ul.burger__list
+                - for (var x = 0; x < 3; x++)
+                  li.burger__block
+                    .burger-inside
+            a.pay__x(href="#")
+                  .pay__x-block
+            
             //конец блока меню
             
           .pay__right 
@@ -33,7 +41,7 @@ html(lang='ru')
             //конец данныx о пользователе 
                   
             //блок form    
-            form.order
+            form.order(method="post")
               
               .order__card
                 .card__title Данные банковской карты
@@ -43,7 +51,7 @@ html(lang='ru')
                       label.card__number
                         .card__number-title Номер карты
                       - for (var x = 0; x < 4; x++)
-                        input.card__number-input(class=`card__number-input--${x}` type="text" maxlength="4")
+                        input.card__number-input(type="text" maxlength="4")
                     .card__row
                       label.card__validity
                         .card__validity-text Срок действия 

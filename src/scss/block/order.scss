@@ -74,9 +74,6 @@
   height: 41px;
   margin-right: 7px;
   padding-left: 10px;
-    &--color-red{
-      border-color: red;
-    }
 }
 
 .card__validity-text{
@@ -85,25 +82,25 @@
 
 .card__mounth,
 .card__year{
-    height: 41px;
-    border-color: $band_grey;
-    -webkit-appearance: none;
-    padding-left: 15px;
-    background:$white url('../img/arrow.svg') no-repeat 85% center;
-    /* for FF */
-    -moz-appearance: none;
-    text-overflow: '';
-    /* for IE */
-    -ms-appearance: none;
-    appearance: none!important;
+  height: 41px;
+  border-color: $band_grey;
+  -webkit-appearance: none;
+  padding-left: 15px;
+  background:$white url('../img/arrow.svg') no-repeat 85% center;
+  /* for FF */
+  -moz-appearance: none;
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
     &:-ms-expand {
         display: none;
     }
 }
 
 .card__mounth{
-    width: 70px;
-    margin-right: 5px;
+  width: 70px;
+  margin-right: 5px;
 }
 
 .card__year{
@@ -120,9 +117,6 @@
   width: 320px;
   height: 41px;
   padding-left: 10px;
-    &--color-red{
-      border-color: red;
-    }
 }
 
 .card__band{
@@ -151,9 +145,6 @@
   height: 41px;
   padding-right: 38px;
   padding-left: 10px;
-    &--color-red{
-      border-color: red;
-    }
 }
 
 .card__cvc-after{
@@ -199,6 +190,10 @@
   font-size: 14px;
 }
 
+//error
+.error{
+  border-color: red;
+}
 
 //кастомизация формы
 input:focus{

@@ -57,12 +57,8 @@ h6 {
           box-sizing: border-box;
 }
 
-.menu__item:nth-child(odd) {
+.menu__item {
   background-color: #1f2229;
-}
-
-.menu__item:nth-child(even) {
-  background-color: #191c24;
 }
 
 .menu__item:last-child .menu__link {
@@ -73,10 +69,15 @@ h6 {
   background-color: #2a2d37;
 }
 
+.menu__item--active {
+  background-color: #2a2d37;
+}
+
 .menu__link {
   height: 75px;
   width: 100%;
   padding-left: 30px;
+  padding-right: 30px;
   padding-top: 28px;
   display: inline-block;
   text-decoration: none;
@@ -115,6 +116,7 @@ h6 {
 
 .pay__right {
   width: 66.5%;
+  min-width: 638px;
 }
 
 .info {
@@ -223,10 +225,6 @@ h6 {
   padding-left: 10px;
 }
 
-.card__number-input--color-red {
-  border-color: red;
-}
-
 .card__validity-text {
   padding-bottom: 4px;
 }
@@ -271,10 +269,6 @@ h6 {
   padding-left: 10px;
 }
 
-.card__person--color-red {
-  border-color: red;
-}
-
 .card__band {
   height: 41px;
   width: 100%;
@@ -301,10 +295,6 @@ h6 {
   height: 41px;
   padding-right: 38px;
   padding-left: 10px;
-}
-
-.card__cvc-input--color-red {
-  border-color: red;
 }
 
 .card__cvc-after {
@@ -351,6 +341,10 @@ h6 {
   font-size: 14px;
 }
 
+.error {
+  border-color: red;
+}
+
 input:focus {
   outline: none !important;
 }
@@ -372,5 +366,21 @@ input::-webkit-input-placeholder {
   color: #89909d;
   font-family: Arial;
   font-size: 12px;
+}
+
+@media screen and (max-width: 977px) {
+  .pay__left {
+    width: calc(100% - 638px);
+  }
+}
+
+@media screen and (max-width: 863px) {
+  .menu {
+    display: none;
+  }
+
+  .pay__left {
+    width: 30px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -7,7 +7,6 @@
   padding-top: 8%;
   padding-bottom: 8%;
 }
-//TODO уточнить про паддинги
 
 .pay__left,
 .pay__right{
@@ -16,8 +15,15 @@
 
 .pay__left{
   width: 33.5%;
+  @include tablet977{
+    width: calc(100% - 638px);
+  }
+  @include tablet864{
+    width: 30px;
+  }
 }
 
 .pay__right{
   width: 66.5%;
+  min-width: 638px;
 }

@@ -14,12 +14,24 @@
           <div class="pay__left"> 
             <!--блок меню-->
             <ul class="menu">
-              <li class="menu__item"><a class="menu__link" href="#">Личный кабинет</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Платежи</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">История платежей</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Настройки</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Выйти</a></li>
-            </ul>
+              <li class="menu__item "><a class="menu__link" href="#">Личный кабинет</a></li>
+              <li class="menu__item menu__item--active"><a class="menu__link" href="#">Платежи</a></li>
+              <li class="menu__item "><a class="menu__link" href="#">История платежей</a></li>
+              <li class="menu__item "><a class="menu__link" href="#">Настройки</a></li>
+              <li class="menu__item "><a class="menu__link" href="#">Выйти</a></li>
+            </ul><a class="burger" href="#">
+              <ul class="burger__list">
+                <li class="burger__block">
+                  <div class="burger-inside"></div>
+                </li>
+                <li class="burger__block">
+                  <div class="burger-inside"></div>
+                </li>
+                <li class="burger__block">
+                  <div class="burger-inside"></div>
+                </li>
+              </ul></a><a class="pay__x" href="#">
+              <div class="pay__x-block"></div></a>
             <!--конец блока меню-->
           </div>
           <div class="pay__right"> 
@@ -39,7 +51,7 @@
             </div>
             <!--конец данныx о пользователе -->
             <!--блок form    -->
-            <form class="order">
+            <form class="order" method="post">
               <div class="order__card">
                 <div class="card__title">Данные банковской карты</div>
                 <div class="card__view">
@@ -48,10 +60,10 @@
                       <label class="card__number">
                         <div class="card__number-title">Номер карты</div>
                       </label>
-                      <input class="card__number-input card__number-input--0" type="text" maxlength="4">
-                      <input class="card__number-input card__number-input--1" type="text" maxlength="4">
-                      <input class="card__number-input card__number-input--2" type="text" maxlength="4">
-                      <input class="card__number-input card__number-input--3" type="text" maxlength="4">
+                      <input class="card__number-input" type="text" maxlength="4">
+                      <input class="card__number-input" type="text" maxlength="4">
+                      <input class="card__number-input" type="text" maxlength="4">
+                      <input class="card__number-input" type="text" maxlength="4">
                     </div>
                     <div class="card__row">
                       <label class="card__validity">

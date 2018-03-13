@@ -1,14 +1,15 @@
+//начало стилей блока с информацией от пользователя
 .info{
   background-color: $beige;
   color: $cold_gray1;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 44px;
-  padding-bottom: 21px;
+  padding-left: rem(30px);
+  padding-right: rem(30px);
+  padding-top: rem(44px);
+  padding-bottom: rem(21px);
 }
 
 .info__title{
-  padding-bottom: 21px;
+  padding-bottom: rem(21px);
 }
 
 .info__key,
@@ -18,10 +19,11 @@
 }
 
 .info__key{
-  width: 156px;
-  padding-bottom: 8px;
+  width: rem(156px);
+  padding-bottom: rem(8px);
 }
 
 .info__valye{
   color: $cold_gray3;
 }
+//конец стилей блока с информацией от пользователя

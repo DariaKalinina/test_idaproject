@@ -1,11 +1,18 @@
+//начало стилей для структурных блоков контента
 .pay{
-  @include clearfix();
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
   padding-top: 8%;
   padding-bottom: 8%;
+}
+
+.pay__wrapper{
+  @include clearfix();
+  @include tablet864{
+    min-width: rem(594px);
+  }
 }
 
 .pay__left,
@@ -19,11 +26,17 @@
     width: calc(100% - 638px);
   }
   @include tablet864{
-    width: 30px;
+    width: rem(40px);
+    text-align: center;
   }
 }
 
 .pay__right{
+  position: relative;
   width: 66.5%;
-  min-width: 638px;
+  min-width: rem(638px);
+    @include tablet614{
+      min-width: rem(360px);
+    }
 }
+//конец стилей для структурных блоков контента

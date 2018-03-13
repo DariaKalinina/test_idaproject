@@ -4,42 +4,45 @@ var inputPerson = $('.card__person');
 var inputCVV = $('.card__cvc-input');
 var inputNumber = $('.card__number-input');
 
-function validateField(key, start, end, backspace) {
-  if(key>=start && key<=end){
-    return true;
-  }
-  if(key===backspace){
+// функция проверяет длину введенного текста
+function validateLength(elem, length) {
+  if(elem.val().length >= length) {
     return true;
   }
   return false;
 }
 
+// проверка на ввод чисел (ошибка, если вводим не число)
 inputNumber.on('keypress', function(e) {
-  var keyCode = e.originalEvent.keyCode;
-  var isValid = validateField(keyCode, 48, 57);
-  if(isValid){
-    inputNumber.removeClass('error');
-  } else {
+  var valNum = e.originalEvent.key;
+  if ( parseInt(valNum) !== parseInt(valNum)) {
     inputNumber.addClass('error');
     return false;
+    } else {
+    inputNumber.removeClass('error');
+    return true;
   }
 });
 
+// проверка на ввод чисел (ошибка, если вводим не число)
 inputCVV.on('keypress', function(e) {
-  var keyCode = e.originalEvent.keyCode;
-  var isValid = validateField(keyCode, 48, 57);
-  if(isValid){
-    inputCVV.removeClass('error');
-  } else {
+  var valNum = e.originalEvent.key;
+  if ( parseInt(valNum) !== parseInt(valNum)) {
     inputCVV.addClass('error');
     return false;
+    } else {
+    inputCVV.removeClass('error');
+    return true;
   }
 });
 
+// проверка на ввод латиницы и пробела
 inputPerson.on('keypress', function(e) {
-  var keyCode =e.originalEvent.keyCode;
-  var isValid = validateField(keyCode, 97, 122, 32);
-  if(isValid){
+  var key =e.originalEvent.key;
+  var regexp= /^[a-zA-Z\s]+$/;
+  var res = key.search(regexp);
+  console.log(res);
+ if(res === 0){
     inputPerson.removeClass('error');
   } else {
     inputPerson.addClass('error');
@@ -47,13 +50,7 @@ inputPerson.on('keypress', function(e) {
   }
 });
 
-function validateLength(elem, length) {
-  if(elem.val().length >= length) { // если < 3 символов
-    return true;
-  }
-  return false;
-}
-
+// проверка длину содержимого в input
 $(document).ready(function(){
 
   $(document).on('change','.card__person',function(){
@@ -65,7 +62,6 @@ $(document).ready(function(){
     inputPerson.addClass('error');
     return false;
   });
-
 
   $(document).on('change','.card__number-input', function(){
     inputNumber.each(function() {
@@ -89,30 +85,28 @@ $(document).ready(function(){
   });
 });
 
-
-
+// функция валидации формы - проверяет, чтобы все поля были введены
 function validateForm() {
-  // ask your validation funcs
   var person = inputPerson.val();
   var cvc = inputCVV.val();
   for (var i = 0; i < inputNumber.length; i++) {
     var num = inputNumber[i].value;
     if(num.length<4) return false;
   }
-
   if(person.length<4) return false;
   if(cvc.length<3) return false;
   return true;
 }
 
-
-$('.order__submit').on('click', function(e) {
-  e.preventDefault();
+// отправка формы, если все корректно введено
+$('#submit').on('click', function(e) {
   var isValidForm = validateForm();
   if (isValidForm) {
-    // $('.order__submit').submit();
-    console.log("ok");
+    $('#form').on('submit', function (e) {
+      console.log('ok');
+    });
   } else{
-    console.log("no ok");
+    e.preventDefault();
+    console.log('no ok');
   }
 });

@@ -1,16 +1,16 @@
+//функция clearfix
 @mixin clearfix(){
   &:before,
   &:after {
-    content:" ";
+    content:' ';
     display: block;
   }
-
   &:after {
     clear:both;
 }}
 
 
-// =================перевод px в rem=============
+//функция перевода px в rem
 @function rem($px){
   @return $px/16px+0rem;
 }

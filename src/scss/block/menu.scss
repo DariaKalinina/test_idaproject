@@ -1,3 +1,4 @@
+//начало стилей блока с меню
 .menu{
   @include tablet864{
     display: none;
@@ -6,7 +7,6 @@
 
 .menu__item{
   background-color: $dark;
-
   &:last-child .menu__link{
     color: $grey;
   }
@@ -18,16 +18,16 @@
   }
 }
 
-
 .menu__link{
-  height: 75px;
+  height: rem(75px);
   width: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 28px;
+  padding-left: rem(30px);
+  padding-right: rem(30px);
+  padding-top: rem(28px);
   display: inline-block;
   text-decoration: none;
   color: $white;
-  font-size: 16px;
+  font-size: rem(16px);
   font-weight: bold;
 }
+//конец стилей блока с меню

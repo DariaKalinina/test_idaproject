@@ -1,3 +1,4 @@
+//подключение шаблона меню
 include templates/menu/menu.pug
 
 doctype html
@@ -5,103 +6,110 @@ html(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width  initial-scale=1')
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
     title Оплата
     link(rel='stylesheet', href='css/main.min.css')
   body
-    //- внешний контайнер
+    //внешний контайнер
     .wrapper
-      //- внутренний контайнер для адаптиваsd
+      //внутренний контайнер для адаптива
       .container
         section.pay
-          .pay__left 
-            //блок меню
-            +menu("menu", ["Личный кабинет", "Платежи", "История платежей", "Настройки", "Выйти"])
-            a.burger(href="#")
-              ul.burger__list
-                - for (var x = 0; x < 3; x++)
-                  li.burger__block
-                    .burger-inside
-            a.pay__x(href="#")
-                  .pay__x-block
-            
-            //конец блока меню
-            
-          .pay__right 
-            //данные о пользователе (json)
-            .info
-              .info__title Информация по оплате:  
-              ul.info__list
-                li.info__item
-                  .info__key Номер счета:
-                  .info__valye= numberPersonal
-                li.info__item
-                  .info__key Сумма платежа:
-                  .info__valye= sum
-            //конец данныx о пользователе 
-                  
-            //блок form    
-            form.order(method="post")
+          .pay__wrapper
+            //левая часть контента
+            .pay__left 
+              //начало блока меню
+              +menu('menu', ['Личный кабинет', 'Платежи', 'История платежей', 'Настройки', 'Выйти'])
+              //конец блока меню
               
-              .order__card
-                .card__title Данные банковской карты
-                .card__view
-                  .card__up-side
-                    .card__row
-                      label.card__number
-                        .card__number-title Номер карты
-                      - for (var x = 0; x < 4; x++)
-                        input.card__number-input(type="text" maxlength="4")
-                    .card__row
-                      label.card__validity
-                        .card__validity-text Срок действия 
-                        select.card__mounth
-                          - for (var i = 1; i <= 9; i++)
-                            option.card__mounth-ndx(value="i")="0"+i
-                          - for (var i = 10; i <= 12; i++)
-                            option.card__mounth-ndx(value="i")=i   
-                        select.card__year
-                          - for (var i = 2018; i <= 2028; i++)
-                            option.card__year-ndx(value="i")=i
-                    .card__row
-                      input(class="card__person" placeholder="Держатель карты" type="text")    
-                  .card__down-side
-                    .card__band
-                    .card__row
-                      label.card__cvc
-                        .card__cvc-title Код CVV2 / CVC2
-                        input.card__cvc-input(type="text" maxlength="3")
-                        .card__cvc-after
+              //начало кнопки для вызова вертикального меню
+              a.burger(href='#')
+                ul.burger__list
+                  - for (var x = 0; x < 3; x++)
+                    li.burger__block
+                      .burger-inside
+              //конец кнопки для вызова вертикального меню  
+                      
+            //правая часть контента  
+            .pay__right 
+              //данные о пользователе (json)
+              .info
+                .info__title Информация по оплате:  
+                ul.info__list
+                  li.info__item
+                    .info__key Номер счета:
+                    .info__valye= numberPersonal
+                  li.info__item
+                    .info__key Сумма платежа:
+                    .info__valye= sum
+              //конец данныx о пользователе 
+                    
+              //блок form    
+              form.order(method='post' id='form')
+                
+                .order__card
+                  .card__title Данные банковской карты
+                  .card__view
+                    .card__up-side
+                      .card__row
+                        label.card__number
+                          .card__number-title Номер карты
+                        - for (var x = 0; x < 4; x++)
+                          input.card__number-input(type='text' maxlength='4')
+                      .card__row
+                        label.card__validity
+                          .card__validity-text Срок действия 
+                          select.card__mounth
+                            - for (var i = 1; i <= 9; i++)
+                              option.card__mounth-ndx(value='i')='0'+i
+                            - for (var i = 10; i <= 12; i++)
+                              option.card__mounth-ndx(value='i')=i   
+                          select.card__year
+                            - for (var i = 2018; i <= 2028; i++)
+                              option.card__year-ndx(value='i')=i
+                      .card__row
+                        input(class='card__person' placeholder='Держатель карты' type='text')    
+                    .card__down-side
+                      .card__band
+                      .card__row
+                        label.card__cvc
+                          .card__cvc-title Код CVV2 / CVC2
+                          input.card__cvc-input(type='text' maxlength='3')
+                          .card__cvc-after
+                
+                .order__submit-wrapper            
+                  input(type='submit' id='submit' value='Оплатить' class='order__submit')       
+              //конец form  
               
-              .order__submit-wrapper            
-                input(type='submit' value='Оплатить' class="order__submit")       
-            //конец form  
+              //начало описания       
+              .description
+                p.description__text
+                  |Исходя из астатической системы координат Булгакова,
+                  | соединение стабильно. Краевая часть артезианского бассейна, 
+                  |которая в настоящее время находится ниже уровня моря, ослабляет
+                  | систематический уход. Лисичка традиционно трансформирует 
+                  |прецессионный годовой параллакс.
+                p.description__text  
+                  |Выклинивание абсолютно аккумулирует твердый pадиотелескоп 
+                  |Максвелла.
+                p.description__text  
+                  |Алмаз слагает горст. Делювий длительно колеблет лазерный
+                  | подвижный объект.
+                p.description__text  
+                  |Устойчивость, например, параллельна. Аргумент перигелия 
+                  |определяет боксит. Проекция вертикально дает уходящий диабаз. 
+                  |Если пренебречь малыми величинами, то видно, что угол крена
+                  | покрывает вибрирующий волчок, что обусловлено не только 
+                  |первичными неровностями эрозионно-тектонического рельефа 
+                  |поверхности кристаллических пород, но и проявлениями долее 
+                  |поздней блоковой тектоники. Засветка неба заставляет иначе 
+                  |взглянуть на то, что такое волчок. 
+              //конец описания  
             
-            //начало описания       
-            .description
-              p.description__text
-                |Исходя из астатической системы координат Булгакова,
-                | соединение стабильно. Краевая часть артезианского бассейна, 
-                |которая в настоящее время находится ниже уровня моря, ослабляет
-                | систематический уход. Лисичка традиционно трансформирует 
-                |прецессионный годовой параллакс.
-              p.description__text  
-                |Выклинивание абсолютно аккумулирует твердый pадиотелескоп 
-                |Максвелла.
-              p.description__text  
-                |Алмаз слагает горст. Делювий длительно колеблет лазерный
-                | подвижный объект.
-              p.description__text  
-                |Устойчивость, например, параллельна. Аргумент перигелия 
-                |определяет боксит. Проекция вертикально дает уходящий диабаз. 
-                |Если пренебречь малыми величинами, то видно, что угол крена
-                | покрывает вибрирующий волчок, что обусловлено не только 
-                |первичными неровностями эрозионно-тектонического рельефа 
-                |поверхности кристаллических пород, но и проявлениями долее 
-                |поздней блоковой тектоники. Засветка неба заставляет иначе 
-                |взглянуть на то, что такое волчок. 
-            //конец описания  
-    
-    //- внешний скрипт      
+              //начало блок вертикального меню
+              +menu('menu-over', ['Личный кабинет', 'Платежи', 'История платежей', 'Настройки', 'Выйти'])
+              //конец блока вертикального меню
+              
+    //внешний скрипт      
     script(src='js/script.min.js')
         

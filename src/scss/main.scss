@@ -1,10 +1,4 @@
-//переменные
-$font-size: 14px;
-$ls: 960px;
-$tablet: 768px;
-$phone: 480px;
-
-//цвета
+//переменные: цвета
 $white: #fff;
 $black: #101114;
 $dark: #1f2229;
@@ -24,9 +18,12 @@ $dark_blue: #004ca2;
 @import 'mixins/mixin.scss';
 @import 'mixins/media.scss';
 
+//block
 @import 'block/adjustment.scss';
-@import 'block/menu.scss';
 @import 'block/pay.scss';
+@import 'block/menu.scss';
+@import 'block/burger.scss';
+@import 'block/menu_over.scss';
 @import 'block/info.scss';
 @import 'block/order.scss';
 @import 'block/description.scss';

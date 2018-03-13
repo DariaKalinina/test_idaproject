@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!--подключение шаблона меню--><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
@@ -8,149 +9,166 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
+    <!--внешний контайнер-->
     <div class="wrapper">
+      <!--внутренний контайнер для адаптива-->
       <div class="container">
         <section class="pay">
-          <div class="pay__left"> 
-            <!--блок меню-->
-            <ul class="menu">
-              <li class="menu__item "><a class="menu__link" href="#">Личный кабинет</a></li>
-              <li class="menu__item menu__item--active"><a class="menu__link" href="#">Платежи</a></li>
-              <li class="menu__item "><a class="menu__link" href="#">История платежей</a></li>
-              <li class="menu__item "><a class="menu__link" href="#">Настройки</a></li>
-              <li class="menu__item "><a class="menu__link" href="#">Выйти</a></li>
-            </ul><a class="burger" href="#">
-              <ul class="burger__list">
-                <li class="burger__block">
-                  <div class="burger-inside"></div>
-                </li>
-                <li class="burger__block">
-                  <div class="burger-inside"></div>
-                </li>
-                <li class="burger__block">
-                  <div class="burger-inside"></div>
-                </li>
-              </ul></a><a class="pay__x" href="#">
-              <div class="pay__x-block"></div></a>
-            <!--конец блока меню-->
-          </div>
-          <div class="pay__right"> 
-            <!--данные о пользователе (json)-->
-            <div class="info">
-              <div class="info__title">Информация по оплате:  </div>
-              <ul class="info__list">
-                <li class="info__item">
-                  <div class="info__key">Номер счета:</div>
-                  <div class="info__valye">87123658716587</div>
-                </li>
-                <li class="info__item">
-                  <div class="info__key">Сумма платежа:</div>
-                  <div class="info__valye">100 руб.</div>
-                </li>
+          <div class="pay__wrapper">
+            <!--левая часть контента-->
+            <div class="pay__left"> 
+              <!--начало блока меню-->
+              <ul class="menu">
+                <li class="menu__item "><a class="menu__link" href="#">Личный кабинет</a></li>
+                <li class="menu__item menu__item--active"><a class="menu__link" href="#">Платежи</a></li>
+                <li class="menu__item "><a class="menu__link" href="#">История платежей</a></li>
+                <li class="menu__item "><a class="menu__link" href="#">Настройки</a></li>
+                <li class="menu__item "><a class="menu__link" href="#">Выйти</a></li>
               </ul>
+              <!--конец блока меню-->
+              <!--начало кнопки для вызова вертикального меню--><a class="burger" href="#">
+                <ul class="burger__list">
+                  <li class="burger__block">
+                    <div class="burger-inside"></div>
+                  </li>
+                  <li class="burger__block">
+                    <div class="burger-inside"></div>
+                  </li>
+                  <li class="burger__block">
+                    <div class="burger-inside"></div>
+                  </li>
+                </ul></a>
+              <!--конец кнопки для вызова вертикального меню  -->
             </div>
-            <!--конец данныx о пользователе -->
-            <!--блок form    -->
-            <form class="order" method="post">
-              <div class="order__card">
-                <div class="card__title">Данные банковской карты</div>
-                <div class="card__view">
-                  <div class="card__up-side">
-                    <div class="card__row">
-                      <label class="card__number">
-                        <div class="card__number-title">Номер карты</div>
-                      </label>
-                      <input class="card__number-input" type="text" maxlength="4">
-                      <input class="card__number-input" type="text" maxlength="4">
-                      <input class="card__number-input" type="text" maxlength="4">
-                      <input class="card__number-input" type="text" maxlength="4">
+            <!--правая часть контента  -->
+            <div class="pay__right"> 
+              <!--данные о пользователе (json)-->
+              <div class="info">
+                <div class="info__title">Информация по оплате:  </div>
+                <ul class="info__list">
+                  <li class="info__item">
+                    <div class="info__key">Номер счета:</div>
+                    <div class="info__valye">87123658716587</div>
+                  </li>
+                  <li class="info__item">
+                    <div class="info__key">Сумма платежа:</div>
+                    <div class="info__valye">100 руб.</div>
+                  </li>
+                </ul>
+              </div>
+              <!--конец данныx о пользователе -->
+              <!--блок form    -->
+              <form class="order" method="post" id="form">
+                <div class="order__card">
+                  <div class="card__title">Данные банковской карты</div>
+                  <div class="card__view">
+                    <div class="card__up-side">
+                      <div class="card__row">
+                        <label class="card__number">
+                          <div class="card__number-title">Номер карты</div>
+                        </label>
+                        <input class="card__number-input" type="text" maxlength="4">
+                        <input class="card__number-input" type="text" maxlength="4">
+                        <input class="card__number-input" type="text" maxlength="4">
+                        <input class="card__number-input" type="text" maxlength="4">
+                      </div>
+                      <div class="card__row">
+                        <label class="card__validity">
+                          <div class="card__validity-text">Срок действия </div>
+                          <select class="card__mounth">
+                            <option class="card__mounth-ndx" value="i">01</option>
+                            <option class="card__mounth-ndx" value="i">02</option>
+                            <option class="card__mounth-ndx" value="i">03</option>
+                            <option class="card__mounth-ndx" value="i">04</option>
+                            <option class="card__mounth-ndx" value="i">05</option>
+                            <option class="card__mounth-ndx" value="i">06</option>
+                            <option class="card__mounth-ndx" value="i">07</option>
+                            <option class="card__mounth-ndx" value="i">08</option>
+                            <option class="card__mounth-ndx" value="i">09</option>
+                            <option class="card__mounth-ndx" value="i">10</option>
+                            <option class="card__mounth-ndx" value="i">11</option>
+                            <option class="card__mounth-ndx" value="i">12</option>
+                          </select>
+                          <select class="card__year">
+                            <option class="card__year-ndx" value="i">2018</option>
+                            <option class="card__year-ndx" value="i">2019</option>
+                            <option class="card__year-ndx" value="i">2020</option>
+                            <option class="card__year-ndx" value="i">2021</option>
+                            <option class="card__year-ndx" value="i">2022</option>
+                            <option class="card__year-ndx" value="i">2023</option>
+                            <option class="card__year-ndx" value="i">2024</option>
+                            <option class="card__year-ndx" value="i">2025</option>
+                            <option class="card__year-ndx" value="i">2026</option>
+                            <option class="card__year-ndx" value="i">2027</option>
+                            <option class="card__year-ndx" value="i">2028</option>
+                          </select>
+                        </label>
+                      </div>
+                      <div class="card__row">
+                        <input class="card__person" placeholder="Держатель карты" type="text">
+                      </div>
                     </div>
-                    <div class="card__row">
-                      <label class="card__validity">
-                        <div class="card__validity-text">Срок действия </div>
-                        <select class="card__mounth">
-                          <option class="card__mounth-ndx" value="i">01</option>
-                          <option class="card__mounth-ndx" value="i">02</option>
-                          <option class="card__mounth-ndx" value="i">03</option>
-                          <option class="card__mounth-ndx" value="i">04</option>
-                          <option class="card__mounth-ndx" value="i">05</option>
-                          <option class="card__mounth-ndx" value="i">06</option>
-                          <option class="card__mounth-ndx" value="i">07</option>
-                          <option class="card__mounth-ndx" value="i">08</option>
-                          <option class="card__mounth-ndx" value="i">09</option>
-                          <option class="card__mounth-ndx" value="i">10</option>
-                          <option class="card__mounth-ndx" value="i">11</option>
-                          <option class="card__mounth-ndx" value="i">12</option>
-                        </select>
-                        <select class="card__year">
-                          <option class="card__year-ndx" value="i">2018</option>
-                          <option class="card__year-ndx" value="i">2019</option>
-                          <option class="card__year-ndx" value="i">2020</option>
-                          <option class="card__year-ndx" value="i">2021</option>
-                          <option class="card__year-ndx" value="i">2022</option>
-                          <option class="card__year-ndx" value="i">2023</option>
-                          <option class="card__year-ndx" value="i">2024</option>
-                          <option class="card__year-ndx" value="i">2025</option>
-                          <option class="card__year-ndx" value="i">2026</option>
-                          <option class="card__year-ndx" value="i">2027</option>
-                          <option class="card__year-ndx" value="i">2028</option>
-                        </select>
-                      </label>
-                    </div>
-                    <div class="card__row">
-                      <input class="card__person" placeholder="Держатель карты" type="text">
-                    </div>
-                  </div>
-                  <div class="card__down-side">
-                    <div class="card__band"></div>
-                    <div class="card__row">
-                      <label class="card__cvc">
-                        <div class="card__cvc-title">Код CVV2 / CVC2</div>
-                        <input class="card__cvc-input" type="text" maxlength="3">
-                        <div class="card__cvc-after"></div>
-                      </label>
+                    <div class="card__down-side">
+                      <div class="card__band"></div>
+                      <div class="card__row">
+                        <label class="card__cvc">
+                          <div class="card__cvc-title">Код CVV2 / CVC2</div>
+                          <input class="card__cvc-input" type="text" maxlength="3">
+                          <div class="card__cvc-after"></div>
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div class="order__submit-wrapper">           
+                  <input class="order__submit" type="submit" id="submit" value="Оплатить">
+                </div>
+              </form>
+              <!--конец form  -->
+              <!--начало описания       -->
+              <div class="description">
+                <p class="description__text">
+                  Исходя из астатической системы координат Булгакова,
+                  соединение стабильно. Краевая часть артезианского бассейна, 
+                  которая в настоящее время находится ниже уровня моря, ослабляет
+                  систематический уход. Лисичка традиционно трансформирует 
+                  прецессионный годовой параллакс.
+                </p>
+                <p class="description__text">
+                   Выклинивание абсолютно аккумулирует твердый pадиотелескоп 
+                  Максвелла.
+                </p>
+                <p class="description__text">
+                   Алмаз слагает горст. Делювий длительно колеблет лазерный
+                  подвижный объект.
+                </p>
+                <p class="description__text">
+                   Устойчивость, например, параллельна. Аргумент перигелия 
+                  определяет боксит. Проекция вертикально дает уходящий диабаз. 
+                  Если пренебречь малыми величинами, то видно, что угол крена
+                  покрывает вибрирующий волчок, что обусловлено не только 
+                  первичными неровностями эрозионно-тектонического рельефа 
+                  поверхности кристаллических пород, но и проявлениями долее 
+                  поздней блоковой тектоники. Засветка неба заставляет иначе 
+                  взглянуть на то, что такое волчок. 
+                </p>
               </div>
-              <div class="order__submit-wrapper">           
-                <input class="order__submit" type="submit" value="Оплатить">
-              </div>
-            </form>
-            <!--конец form  -->
-            <!--начало описания       -->
-            <div class="description">
-              <p class="description__text">
-                Исходя из астатической системы координат Булгакова,
-                соединение стабильно. Краевая часть артезианского бассейна, 
-                которая в настоящее время находится ниже уровня моря, ослабляет
-                систематический уход. Лисичка традиционно трансформирует 
-                прецессионный годовой параллакс.
-              </p>
-              <p class="description__text">
-                 Выклинивание абсолютно аккумулирует твердый pадиотелескоп 
-                Максвелла.
-              </p>
-              <p class="description__text">
-                 Алмаз слагает горст. Делювий длительно колеблет лазерный
-                подвижный объект.
-              </p>
-              <p class="description__text">
-                 Устойчивость, например, параллельна. Аргумент перигелия 
-                определяет боксит. Проекция вертикально дает уходящий диабаз. 
-                Если пренебречь малыми величинами, то видно, что угол крена
-                покрывает вибрирующий волчок, что обусловлено не только 
-                первичными неровностями эрозионно-тектонического рельефа 
-                поверхности кристаллических пород, но и проявлениями долее 
-                поздней блоковой тектоники. Засветка неба заставляет иначе 
-                взглянуть на то, что такое волчок. 
-              </p>
+              <!--конец описания  -->
+              <!--начало блок вертикального меню-->
+              <ul class="menu-over">
+                <li class="menu-over__item "><a class="menu-over__link" href="#">Личный кабинет</a></li>
+                <li class="menu-over__item "><a class="menu-over__link" href="#">Платежи</a></li>
+                <li class="menu-over__item "><a class="menu-over__link" href="#">История платежей</a></li>
+                <li class="menu-over__item "><a class="menu-over__link" href="#">Настройки</a></li>
+                <li class="menu-over__item "><a class="menu-over__link" href="#">Выйти</a></li>
+              </ul>
+              <!--конец блока вертикального меню-->
             </div>
-            <!--конец описания  -->
           </div>
         </section>
       </div>
     </div>
+    <!--внешний скрипт      -->
     <script src="js/script.min.js"></script>
   </body>
 </html>

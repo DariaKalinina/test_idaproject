@@ -1,0 +1,42 @@
+//начало стилей блока с меню для адаптивной версии сайта
+.menu-over{
+  background-color: rgba($black, .9);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 20px;
+  z-index: 20;
+  text-align: center;
+  display: none;
+  overflow-y: hidden;
+  transition: 3s;
+    &--active{
+      display: block;
+    }
+}
+
+.menu-over__item{
+  &:last-child .menu-over__link{
+    color: $grey;
+  }
+  &:hover{
+    background-color: $dark_grey;
+  }
+}
+
+.menu-over__link{
+  height: rem(75px);
+  width: 100%;
+  padding-left: rem(30px);
+  padding-right: rem(30px);
+  padding-top: rem(28px);
+  display: inline-block;
+  text-decoration: none;
+  color: $white;
+  font-size: rem(16px);
+  font-weight: bold;
+}
+//начало стилей блока с меню для адаптивной версии сайта

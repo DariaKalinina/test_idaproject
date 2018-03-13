@@ -1,23 +1,27 @@
+//начало стилей блока с вводом информации с банковской карты и отправкой формы
 .order{
   background-color: $beige;
   color: $cold_gray1;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 45px;
+  padding-left: rem(30px);
+  padding-right: rem(30px);
+  padding-bottom: rem(45px);
 }
 
 .card__title{
-  font-size: 22px;
+  font-size: rem(22px);
   font-weight: bold;
   color: $cold_gray3;
-  padding-bottom: 20px;
+  padding-bottom: rem(20px);
 }
 
 .card__view{
   position: relative;
-  height: 275px;
-  font-size: 16px;
+  height: rem(275px);
+  font-size: rem(16px);
   font-family: Arial;
+    @include tablet614{
+      height: rem(500px);
+    }
 }
 
 .card__up-side,
@@ -31,61 +35,66 @@
   z-index: 10;
   text-align: left;
   border-style: solid;
-  border-width: 1px;
+  border-width: rem(1px);
   border-color: $band_grey;
-  border-radius: 10px;
-  width: 350px;
-  height: 236px;
-  padding-top: 20px;
+  border-radius: rem(10px);
+  width: rem(350px);
+  height: rem(236px);
+  padding-top: rem(20px);
 }
 
 .card__down-side{
   position: absolute;
   z-index: 5;
-  top: 19px;
-  left: 190px;
+  top: rem(19px);
+  left: rem(190px);
   text-align: right;
   border-style: solid;
-  border-width: 1px;
+  border-width: rem(1px);
   border-color: $band_grey;
-  border-radius: 10px;
-  width: 374px;
-  height: 237px;
-  padding-top: 24px;
+  border-radius: rem(10px);
+  width: rem(374px);
+  height: rem(237px);
+  padding-top: rem(24px);
+    @include tablet614{
+      width: rem(350px);
+      top: rem(250px);
+      left: 0;
+    }
 }
 
 .card__row{
-  padding-right: 9px;
-  padding-left: 14px;
-  padding-bottom: 13px;
+  padding-right: rem(9px);
+  padding-left: rem(14px);
+  padding-bottom: rem(13px);
 }
 
 .card__number-title{
-  padding-bottom: 3px;
+  padding-bottom: rem(3px);
 }
 
 .card__number-input{
   display: inline-block;
   border-style: solid;
-  border-width: 1px;
+  border-width: rem(1px);
   border-color: $band_grey;
   background-color: $white;
-  width: 63px;
-  height: 41px;
-  margin-right: 7px;
-  padding-left: 10px;
+  width: rem(63px);
+  height: rem(41px);
+  margin-right: rem(7px);
+  padding-left: rem(10px);
 }
 
 .card__validity-text{
-  padding-bottom: 4px;
+  padding-bottom: rem(4px);
 }
 
 .card__mounth,
 .card__year{
-  height: 41px;
+  height: rem(41px);
   border-color: $band_grey;
   -webkit-appearance: none;
-  padding-left: 15px;
+  padding-left: rem(15px);
   background:$white url('../img/arrow.svg') no-repeat 85% center;
   /* for FF */
   -moz-appearance: none;
@@ -99,31 +108,31 @@
 }
 
 .card__mounth{
-  width: 70px;
-  margin-right: 5px;
+  width: rem(70px);
+  margin-right: rem(5px);
 }
 
 .card__year{
-  width: 86px;
+  width: rem(86px);
 }
 
 
 .card__person{
   display: block;
   border-style: solid;
-  border-width: 1px;
+  border-width: rem(1px);
   border-color: $band_grey;
   background-color: $white;
-  width: 320px;
-  height: 41px;
-  padding-left: 10px;
+  width: rem(320px);
+  height: rem(41px);
+  padding-left: rem(10px);
 }
 
 .card__band{
-  height: 41px;
+  height: rem(41px);
   width: 100%;
   background-color: $band_grey;
-  margin-bottom: 17px;
+  margin-bottom: rem(17px);
 }
 
 .card__cvc{
@@ -132,19 +141,19 @@
 }
 
 .card__cvc-title{
-  padding-bottom: 2px;
+  padding-bottom: rem(2px);
 }
 
 .card__cvc-input{
   display: inline-block;
   border-style: solid;
-  border-width: 1px;
+  border-width: rem(1px);
   border-color: $band_grey;
   background-color: $white;
-  width: 136px;
-  height: 41px;
-  padding-right: 38px;
-  padding-left: 10px;
+  width: rem(136px);
+  height: rem(41px);
+  padding-right: rem(38px);
+  padding-left: rem(10px);
 }
 
 .card__cvc-after{
@@ -155,47 +164,52 @@
     &:after{
       position: absolute;
       z-index: 2;
-      top: -18px;
-      right: 12px;
+      top: rem(-18px);
+      right: rem(12px);
       text-align: center;
       display: inline-block;
-      content: "?";
+      content: '?';
       color: $light_gray;
       line-height: 1.7;
       border-style: solid;
-      border-width: 1px;
+      border-width: rem(1px);
       border-color: $light_gray;
       border-radius: 50%;
-      width: 25px;
-      height: 25px;
+      width: rem(25px);
+      height: rem(25px);
     }
 }
 
 .order__submit-wrapper {
-  padding-left: 14px;
+  padding-left: rem(14px);
+    @include tablet614{
+        padding-left: 0;
+    }
 }
 
 .order__submit{
   display: block;
-  border-radius: 20px;
+  border-radius: rem(20px);
   border: 0;
   background: -moz-linear-gradient($light_blue, $dark_blue);
   background: -webkit-gradient(linear, 0 0, 0 100%, from($light_blue), to($dark_blue));
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light_blue', endColorstr='$dark_blue');
-  width: 133px;
-  height: 40px;
+  width: rem(133px);
+  height: rem(40px);
   color: $white;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-weight: bold;
-  font-size: 14px;
+  font-size: rem(14px);
 }
 
-//error
+//начало стиля для изменении input, где данные введены не корректно
 .error{
   border-color: red;
 }
+//конец стиля для изменении input, где данные введены не корректно
 
-//кастомизация формы
+
+//начало кастомизации формы
 input:focus{
   outline: none!important;
 }
@@ -204,9 +218,16 @@ select:focus{
   outline: none!important;
 }
 
+option:hover {
+  background-color: rgba($light_gray, .9);
+}
+
 input::-moz-placeholder,
 input::-ms-input-placeholder,
 input::-webkit-input-placeholder{
-  margin-left: 10px;
+  margin-left: rem(10px);
   color: rgba($light_gray, .9);
 }
+//конец кастомизации формы
+
+//начало стилей блока с вводом информации с банковской карты и отправкой формы

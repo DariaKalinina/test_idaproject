@@ -1,3 +1,4 @@
+//начало медиазапросов адаптива сайта
 @mixin tablet977{
   @media screen and (max-width: 977px){
     @content;
@@ -10,16 +11,15 @@
   }
 }
 
-
-@mixin tablet{
-  @media screen and (max-width: $tablet){
+@mixin tablet614{
+  @media screen and (max-width: 614px){
     @content;
   }
 }
 
-
-@mixin phone{
-  @media screen and (max-width: $phone){
+@mixin phone412{
+  @media screen and (max-width: 412px){
     @content;
   }
 }
+//конец медиазапросов для адаптива сайта

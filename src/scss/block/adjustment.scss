@@ -1,3 +1,4 @@
+//начало стилей для html, body
 html, body{
   height: 100%;
   padding: 0;
@@ -5,14 +6,23 @@ html, body{
   position: relative;
 }
 
-body {
-  margin: 0;
-  font-size: $font-size;
-  background-color: $black;
-  font-family: "Open Sans", Arial, sans-serif;
-  line-height: 1.42;
+html{
+  font-size: rem(14px);
+  @include phone412{
+      font-size: rem(11px);
+  }
 }
 
+body {
+  margin: 0;
+  font-size: rem(14px);
+  background-color: $black;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.42;
+}
+//конец стилей для html, body
+
+//начало стилей для внешнего и внутреннего контейнера
 .wrapper{
   min-height: 100%;
   height: auto;
@@ -21,15 +31,17 @@ body {
 }
 
 .container{
-  max-width: $ls;
+  max-width: rem(980px);
   width: 100%;
   height: 100%;
   margin: 0 auto;
   position: relative;
+  padding-left: rem(10px);
+  padding-right: rem(10px);
 }
+//конец стилей для внешнего и внутреннего контейнера
 
-
-/*------------стили для тегов------------*/
+//------------стили для тегов------------
 ul{
   margin: 0;
   padding: 0;

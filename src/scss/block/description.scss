@@ -1,7 +1,9 @@
+//начало стилей блока с описанием под формой
 .description{
-  padding: 12px 30px 20px;
+  padding: rem(12px) rem(30px) rem(20px);
   background-color: $brown;
   color: $cold_gray2;
   font-family: Arial;
-  font-size: 12px;
+  font-size: rem(12px);
 }
+//конец стилей блока с описанием под формой

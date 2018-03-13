@@ -1,67 +1,34 @@
+//начало стилей для кпопки, вызывающей выпадающее меню
 .burger{
   display: none;
   vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  text-align: left;
     @include tablet864{
-      position: relative;
       display: inline-block;
       z-index: 1;
     }
 }
 
 .burger__list{
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: inline-block;
 }
 
 .burger__block{
-  padding-bottom: 5px;
-  width: 24px;
-  height: 9px;
+  padding-bottom: rem(5px);
+  width: rem(24px);
+  height: rem(9px);
   &:last-child{
     padding-bottom: 0;
-    height: 4px;
+    height: rem(4px);
   }
 }
 
 .burger-inside{
   background-color: $white;
-  border-radius: 1px;
-  width: 24px;
-  height: 4px;
+  border-radius: rem(1px);
+  width: rem(24px);
+  height: rem(4px);
 }
-
-.pay__x{
-  display: none;
-  height: 24px;
-  width: 24px;
-  position: relative;
-  margin-right: 16px;
-  margin-top: 4px;
-    &--visible{
-      display: inline-block;
-      z-index: 15;
-    }
-}
-
-.pay__x-block{
-  z-index: 15;
-  background: $white;
-  height: 4px;
-  width: 28px;
-  position: absolute;
-  top: 10px;
-  left: -2px;
-  transform: rotate(45deg);
-
-    &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 28px;
-    width: 4px;
-    background: $white;
-    top: -12px;
-    left: 12px;
-  }
-}
+//конец стилей для кпопки, вызывающей выпадающее меню
